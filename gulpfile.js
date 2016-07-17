@@ -220,6 +220,11 @@ function GruntTasks (grunt) {
         devperf: {
             options: {
                 urls: getSitePages(),
+                phantomasOptions: {
+                  'no-externals': true,
+                  'ignore-ssl-errors': true,
+                  'ssl-protocol': 'any'
+                },
                 openResults: false,
                 resultsFolder: prefix+'/devperf'
             }
